@@ -7,7 +7,7 @@ const Course = () => {
 getProducts()
   },[])
   const getProducts = async () =>{
-let result = await fetch(`${window.location.origin}/products`)
+let result = await fetch("http://localhost:5000/products")
 result = await result.json();
 setProducts(result)
   }

@@ -15,7 +15,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     console.log(name, email, password)
-    let result = await fetch(`${window.location.origin}/signup`, {
+    let result = await fetch("http://localhost:5000/signup", {
       method: 'post',
       body: JSON.stringify({ name, email, password }),
       headers: {

@@ -12,7 +12,7 @@ const Buy = () => {
 
     const getBuy = async () =>{
         console.log(params)
-        let result = await fetch(`${window.location.origin}/buy/${params.id}`)
+        let result = await fetch("http://localhost:5000/buy/${params.id}")
         result = await result.json();
         setProducts(result)
         console.log(result)

@@ -12,7 +12,7 @@ const [discription, setdiscription] = useState();
 const handelAdmid = async () => {
     console.log(name,prise,img,discription)
     
-    let result = await fetch(`${window.location.origin}/add-product`,{
+    let result = await fetch("http://localhost:5000/add-product",{
 method : 'post' ,
 body:JSON.stringify({name, prise, img, discription}),
 headers:{
