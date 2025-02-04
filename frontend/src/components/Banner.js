@@ -1,6 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Banner = () => {
+const navigate = useNavigate();
+
+const getStrt = () =>{
+  navigate('/course')
+}
   return (
     <>
       <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10'>
@@ -27,7 +36,7 @@ const Banner = () => {
 </label>
 
         </div>
-        <button className=" mt-6 px-6 py-1 bg-pink-500">get start</button>
+        <button onClick={getStrt} className=" mt-6 px-6 py-1 bg-pink-500">get start</button>
         </div>
         <div className=' order-1 w-full md:w-1/2'>
         <img src="Banner.jpg" className='w-92 h-92' alt='banner' />

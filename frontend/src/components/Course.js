@@ -12,8 +12,13 @@ result = await result.json();
 setProducts(result)
   }
   console.log(products)
+  const buyBtn = () => {
+    alert("Please sellect this book")
+  }
   return (
    <>
+
+   {products ?
    <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
 <div className='mt-28 items-center justify-center text-center'>
     <h1 className='text-2xl  md:text-4xl'>We're delighted to have you <span className='text-pink-500'>Here! :)</span></h1>
@@ -21,8 +26,8 @@ setProducts(result)
      content of a page when looking at its layout. The point of using Lorem Ipsum is
       that it has a more-or-less normal distribution of letters, as opposed to using 
       'Content here, content here', making it look like readable English.  </p>
-      <Link to={'/'}>
-      <button className="px-4 py-1 border bg-pink-500 text-white hover:bg-pink-700 mt-6">Buy Now</button>
+      <Link >
+      <button onClick={buyBtn} className="px-4 py-1 border bg-pink-500 text-white hover:bg-pink-700 mt-6">Buy Now</button>
       </Link>
      
 </div>
@@ -72,7 +77,16 @@ setProducts(result)
 
 
 </div>
-   
+    :
+
+    <div className="flex w-52 flex-col gap-4">
+  <div className="skeleton h-32 w-full"></div>
+  <div className="skeleton h-4 w-28"></div>
+  <div className="skeleton h-4 w-full"></div>
+  <div className="skeleton h-4 w-full"></div>
+</div>
+}
+
    </>
   )
 }

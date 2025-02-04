@@ -13,6 +13,7 @@ import Buy from './components/Buy';
 
 
 
+
 function App() {
    const auth = localStorage.getItem('user')
 
@@ -31,6 +32,7 @@ function App() {
                <Route path='/contact' element={<Contact />} />
                <Route path='/admin' element={<Admin />} />
                <Route path='/buy/:id' element={<Buy />} />
+            
             </Routes>
          </div>
         
